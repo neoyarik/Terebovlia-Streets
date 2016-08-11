@@ -285,10 +285,10 @@
 
     MapsLib.prototype.getList = function(whereClause) {
     var self = this;
-    var selectColumns = 'name, address, hours, recyclables ';
+    var selectColumns = 'name ';
 
     self.query({ 
-      select: name, 
+      select: selectColumns, 
       where: whereClause 
     }, function(response) { 
       self.displayList(response);
